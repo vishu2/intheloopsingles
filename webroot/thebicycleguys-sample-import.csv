@@ -1,0 +1,51 @@
+SKU (Tag ID),City where Purchases Occurs,Buyer,Invoice Amount,Invoice ID,Type,Brand,Description,Priority/Color,Expected Price,Initial List Price,Listed Date,Notes
+BDR-19050,BDR,,70,269983,Computer,Garmin,Garmin Edge 510 GPS Cycling Touchscreen Computer,,,,,
+BDR-19051,BDR,,470,269985,Full bike,Giant,2010 Giant Defy 3 Aluminum Medium Road Bike 24 Speed Shimano Vuelta Zero Lite,,,399.55,1/2/2020,
+BDR-19052,BDR,,470,269985,Full bike,Kestrel,2011 Kestrel Airfoil Pro SL 59cm Carbon TT Triathlon 2x10 Ultegra Oval Vittoria,,,1499.85,12/10/2019,
+BDR-19053,BDR,,470,269985,Wheel,,BDR-19053,,,,,
+BDR-19054,BDR,,250,269986,Full bike,Lemond,2002 LeMond Zurich 55cm Steel Road Bike 2x9 Speed Shimano Ultegra Reynolds 853,,,439.35,12/19/2019,Zurich
+BDR-19055,BDR,,250,269986,Full bike,Felt,2005 Felt F70 48 cm Road Bike 3 x 9 Speed Shimano 105 with Carbon Seat Stays,,,429.55,12/17/2019,F70
+BDR-19056,BDR,,120,269987,Full bike,GT,"GT Pantera AL Extra Large 22"" XL Rigid Fork Mountain Bike 3 x 9 Speed Shimano XT",,,279.85,1/29/2020,Pantera
+BDR-19057,BDR,,120,269987,Full bike,Trek,BDR-19057,,,,,Trail o bike
+BDR-19058,BDR,,50,269988,Wheel,Enve,Enve Classic 45 Tubular Carbon 20 spoke Front Wheel 850g,,,269.85,12/11/2019,
+BDR-19059,BDR,,1500,269989,Full bike,Trek,2017 Trek Boone RSL 61cm XL Carbon Fiber Cyclocross Race Bike 11 Speed Ultegra,,,1999.85,12/12/2019,Boone
+BDR-19060,BDR,,1500,269989,Full bike,Trek,2018 Trek Procaliber 8 29er Mountain Bike 21.5in XL 1 x 11 Speed Shimano XT XTR,,,1449.85,12/30/2019,2018 Procaliber 8
+BDR-19061,BDR,,95,269990,Trainer,Elite,Qubo Elite Fluid Indoor Cycling Trainer,,,149.85,12/11/2019,Fluid
+BDR-19062,BDR,,95,269990,Rack,Thule,Thule 9042 Helium Aero 2 Bike Carrier Rack Hitch Mounted,,,179.55,2/3/2020,9042 Helium 2
+BDR-19063,BDR,,125,269991,Full bike,Trek,2010 Trek 1.2 Triple 54cm Aluminum Road Bike 3 x 9 Speed Shimano Bontrager,,,339.35,12/19/2019,Alpha 1.2
+BDR-19064,BDR,,120,269992,Full bike,Trek,2012 Trek 7.3 FX WSD 19in Large Hybrid Bike 3 x 8 Speed Shimano,,,379.35,12/19/2019,7.3 FX
+BDR-19065,BDR,,300,269993,Full bike,Lemond,2006 LeMond Etape 55 cm Medium Road Bike 24 Speed Shimano Tiagra Sora 700c,,,329.55,12/17/2019,Etape (Blue/black)
+BDR-19066,BDR,,210,269995,Wheelset,DT swiss/ Am classic,BDR-19066,,,,,
+BDR-19067,BDR,,210,269995,Full bike,Trek,2011 Trek Lexa WSD 55cm Aluminum Women's Road Bike 2x8 Shimano FSA Bontrager,,,249.85,12/14/2019,Lexa
+BDR-19068,BDR,,50,269996,Wheelset,Bontarger,BDR-19068,,,,,
+BDR-19070,BDR,,140,269997,Wheelset,Zipp 404,Zipp 440 Tubular Carbon Front Wheel w/ Schwalbe Lugano 700x22mm 28h,,,99.85,12/11/2019,2 wheeler
+BDR-19071,BDR,,140,269997,Wheelset,AX2,BDR-19071,,,,,700c
+BDR-19072,BDR,,140,269997,Rack,Thule,BDR-19072,,,,,
+BDR-19073,BDR,,675,269998,Full bike,Cannondale,2013 Cannondale SuperX 60cm Carbon Cyclocross Gravel Bike 2 x 10 Speed Ultegra,,,1099.85,12/10/2019,SuperX
+BDR-19074,BDR,,675,269998,Frame,GT,BDR-19074,,,319.35,12/14/2019,Expert Carbon
+BDR-19075,BDR,,675,269998,Full bike,Felt,2014 Felt F75X 50cm Aluminum Cross Bike 2x10 Shimano 105 Tektro Vittoria,,,649.85,12/11/2019,F75X
+BDR-19076,BDR,,675,269998,Frame,Felt,2014 Felt F75X Aluminum 47 cm Cyclocross 20 Speed Shimano 105 RS10,,,449.55,12/24/2019,2014 F75X
+BDR-19077,BDR,,135,269999,Full bike,Specialized,"2004 Specialized FSR XC Medium / Large 18"" Mountain Bike 3 x 9 Speed Shimano",,,599.55,12/30/2019,FSR XC
+BDR-19078,BDR,,135,269999,Wheelset,RX100,BDR-19078,,,,,
+BDR-19080,BDR,,,270000,Full bike,Trek,2005 Trek 1000 SL 60 cm Aluminum Road Bike 3 x 8 Speed Shimano 700c,,,299.55,1/15/2020,1000 SL
+BDR-19081,BDR,,50,285051,Trainer,Cycleops,CycleOps Fluid 2 Fluid Bike Trainer with Riser Block,,,139.35,2/26/2020,Fluid 2
+BDR-19082,BDR,,25,285052,Full bike,Giant,"1999 Giant Eddie Bauer Comp L / 19"" Mountain Bike 3 x 8 Shimano Rock Shox WTB",,,249.35,2/21/2020,Eddie Bauer
+BDR-19083,BDR,,25,285052,Full bike,Huffy,BDR-19083,,,,,
+BDR-19084,BDR,,100,285053,Wheelset,Aksium,Mavic Aksium Race 700c Aluminum Clincher Rim Brake 11 Speed Road Wheelset,,,,,
+BDR-19085,BDR,,100,285053,Trainer,,BDR-19085,,,,,
+BDR-19086,BDR,,65,285054,Rack,Thule,BDR-19086,,,,,4 bike swingarm
+BDR-19087,BDR,,65,285054,Trainer,Cycleops,CycleOps Mag+ Bicycle Trainer With Variable Resistance,,,99.85,12/14/2019,
+BDR-19088,BDR,,25,285055,Wheelset,Easton,BDR-19088,,,,,
+BDR-19089,BDR,,50,285056,Full bike,GTR,2007 GT R Series 5 Road Bike M / 54cm 2 x 8 Speeds Shimano Alex Rims 700C,,,279.35,1/29/2020,Series 5
+BDR-19090,BDR,,75,285057,Trainer,Computrainer,BDR-19090,,,,,
+BDR-19091,BDR,,270,285058,Full bike,Surley,Surly Steamroller 56 cm Steel Urban Bike - Fixed Gear Front Brake 700c Sugino,,,449.55,12/30/2019,Steamroller
+BDR-19092,BDR,,270,285058,Full bike,Trek,BDR-19092,,,,,SL
+BDR-19095,BDR,,270,285058,Wheelset,Spinergy,Spinergy Stealth Carbon Clincher Rim Brake 700C Road Wheelset 10 Speed,,,349.85,12/12/2019,
+BDR-19096,BDR,,270,285058,Computer,Garmin,BDR-19096,,,,,520
+BDR-19097,BDR,,100,285059,Full bike,Bianchi,1993 Bianchi Veloce 55cm Mega Pro Steel Road Bike 18 Speed Campagnolo - Vintage,,,449.55,12/17/2019,Vintage (Red)
+BDR-19098,BDR,,280,285061,Full bike,Trek,Trek 1500 WSD Alpha SLR Aluminum 54cm Road Bike 27 Speed Shimano 105 Ultegra,,,359.85,1/2/2020,1500 (blue/ white)
+BDR-19099,BDR,,280,285061,Full bike,Giant,BDR-19099,,,,,cypress (blue/ white)
+BDR-19100,BDR,,280,285061,Full bike,Cannondale,2005 Cannondale R500 58cm Aluminum Road Bike 27 Speed Shimano 105,,,499.85,1/4/2020,r500 (navy)
+BDR-19101,BDR,,175,285062,Full bike,Giant,2018 Liv Rove 1 Large 20.5in Hybrid/Comfort Bike 30 Speed Shimano 700C,,,599.85,12/12/2019,LIV rove
+BDR-19102,BDR,,110,285063,Wheelset,Mavic,Mavic Ksyrium SL Superlight Premium 700C Clincher Rim Brake 11 Speed Wheelset,,,399.85,12/11/2019,Ksyrium
+BDR-19103,BDR,,110,285063,Wheel,custom,BDR-19103,,,,,36 spoke

@@ -1,0 +1,230 @@
+
+.user-rating {
+direction: rtl;
+font-size: 20px;
+unicode-bidi: bidi-override;
+padding-left: 15px;
+display: inline-block;
+}
+.user-rating input {
+opacity: 0;
+position: relative;
+left: -15px;
+z-index: 2;
+cursor: pointer;
+}
+.user-rating span.star:before {
+color: #777777;
+content:"ï€†";
+/*padding-right: 5px;*/
+}
+.user-rating span.star {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+position: relative;
+z-index: 1;
+}
+.user-rating span {
+margin-left: -15px;
+}
+.user-rating span.star:before {
+color: #777777;
+content:"\f006";
+/*padding-right: 5px;*/
+}
+.user-rating input:hover + span.star:before, .user-rating input:hover + span.star ~ span.star:before, .user-rating input:checked + span.star:before, .user-rating input:checked + span.star ~ span.star:before {
+color: #ffd100;
+content:"\f005";
+}
+
+.selected-rating{
+color: #ffd100;
+font-weight: bold;
+font-size: 3em;
+}
+
+
+.delete{
+color:red;
+cursor: pointer;
+}
+
+.red-text{
+color: red;
+}
+
+
+
+.dropdown-menu {
+      margin-top: 0;
+  }
+
+  .dropdown-menu .dropdown-toggle::after {
+      vertical-align: middle;
+      border-left: 4px solid;
+      border-bottom: 4px solid transparent;
+      border-top: 4px solid transparent;
+  }
+
+  .dropdown-menu .dropdown .dropdown-menu {
+      left: 100%;
+      top: 0%;
+      margin: 0 20px;
+      border-width: 0;
+  }
+
+  .dropdown-menu .dropdown .dropdown-menu.left {
+      right: 100%;
+      left: auto;
+  }
+
+  /*.dropdown-menu>li a:hover,
+  .dropdown-menu>li.show {
+      background: #007bff;
+      color: white;
+  }*/
+
+  /*.dropdown-menu>li.show>a {
+      color: white;
+  }
+*/
+  @media (min-width: 768px) {
+      .dropdown-menu .dropdown .dropdown-menu {
+          margin: 0;
+          border-width: 1px;
+      }
+  }
+/*deginer changes 3rd july*/
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #fab005;
+}
+@media (min-width: 48rem){
+.navbar-expand-md .navbar-dark .nav-item.active .nav-link, .navbar-expand-md.navbar-dark .nav-item.active .nav-link {
+    background-color: rgb(53, 64, 82);
+}}
+.dropdown-menu>li a:hover,
+  .dropdown-menu>li.show {
+     /* background: #007bff;*/
+     color:#fab005
+  }
+  .dropdown-menu>li.show>a {
+      color:#fab005
+  }
+ /* @media (min-width: 48rem){
+.navbar-expand-md .navbar-dark .nav-item.active:after, .navbar-expand-md.navbar-dark .nav-item.active:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0;
+    bottom: 0;
+    border-style: solid;
+    border-width: 0 0 8px 8px;
+    border-color: transparent transparent #639 transparent;
+}
+}*/
+
+/*.table-responsive table thead th{
+  vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+}*/
+#bulKmsg .nav-tabs .nav-item.show .nav-link, #bulKmsg .nav-tabs .nav-link.active{
+    background: #FFF;
+    border-left-color: #EEE;
+    border-right-color: #EEE;
+    border-top: 3px solid #fab005;
+    color: #555;
+}
+
+
+#bulKmsg .nav-tabs .nav-link {
+      background-color: #edf1f2;
+     border-bottom: 0;
+
+    }
+#massSms .nav-tabs .nav-item.show .nav-link, #massSms .nav-tabs .nav-link.active{
+    background: #FFF;
+    border-left-color: #EEE;
+    border-right-color: #EEE;
+    border-top: 3px solid #fab005;
+    color: #555;
+}
+
+
+#massSms .nav-tabs .nav-link {
+      background-color: #E1F0FF;
+     border-bottom: 0;
+      background-image: linear-gradient(64deg, transparent 47%, rgba(255, 255, 255, 0.78) 100%);
+    }
+    .table-responsive .table td a span .fa-edit{padding: 4px;background-color: #F3F6F9;
+    border-color: #F3F6F9;}
+    .table thead th, .table thead th a {
+    	color: #354052;
+   white-space: nowrap;
+    text-transform: uppercase;
+    font-size: 11px
+   /* letter-spacing: 0.1rem;*/
+    }
+.detail_bg{position: relative;}
+    .detail_bg .overlay-travel {
+    background: #0006;
+        height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#memBerDetails .form-control-lg {
+   
+    font-size: 1.01rem;
+    line-height: 1.5;
+    border-radius: 0.42rem;
+    background-color: #F3F6F9;
+    border-color: #F3F6F9;
+}
+
+#memBerDetails .memeber-img{
+  border: 3px solid #ffffff;
+    box-shadow: 0px 0rem 0rem 0.5rem rgba(0, 0, 0, 0.075);
+    border-right: 0.42rem;
+
+}
+#memBerDetails .input_cover{position: relative;margin-bottom: 20px}
+#memBerDetails i{position: absolute;
+    top: 15px;
+    left: 9px;}
+    .card-table tbody tr:nth-of-type(even) {
+    background-color: rgba(53,64,82,.024);
+}
+ .edit_btn{color:  #3699FF;background-color: #E1F0FF; margin-right: 2px;}
+   .delete_btn, .edit_btn{ padding: 4px; border-radius: 2px}
+   .delete_btn{color: #F64E60;background-color: #FFE2E5}
+ #massSms .user-title, #lead .user-title{font-weight: 500; margin-bottom: 20px; text-transform: none;}
+  .user-name-dashboard{    padding-top: 30px;
+    text-align: left;}
+    
+  .user-icon-dashboard{background-color: #FFE2E5;font-size: 46px;padding: 20px; border-top-left-radius: 5px;border-bottom-left-radius: 5px;}
+.user-Cell-dashboard{background-color:  #1BC5BD ;font-size: 46px;padding: 20px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;}
+.user-phone-dashboard{background-color: #3699FF;font-size: 46px;padding: 20px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;}
+.user-email-dashboard{background-color:#FFA800;font-size: 46px;padding: 20px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;}
+/*.user-email-dashboard{#F64E60}*/
+ .user-name-dashboard h2{font-size: 1em;}
+ .user-name-dashboard p{font-size: 12px;}
+ .fc-scroller {
+   overflow-y: visible !important;
+   height: auto !important;
+}
+#massSms .user-details, #lead .user-details{font-size: 18px;text-transform: uppercase;}
+#lead .user-details h2{font-size: 28px;padding: 20px 0;}
+#lead .badge-light{background: #3699ffa3;}
+.fc-unthemed .fc-event{color:#000; }
+.fc-unthemed .fc-event:hover {
+    color: #000;
+    text-decoration: none;
+}
+.fresh_works{border:2px solid #fab005; color: #fff;}
