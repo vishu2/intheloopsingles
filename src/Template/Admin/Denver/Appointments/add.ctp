@@ -96,7 +96,7 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12" id="massSms">
-							<ul class="nav nav-tabs " data-toggle="tabs">
+							<ul class="nav nav-tabs " data-toggle="tabs" id="tabs">
 								<li class="nav-item">
 									<a href="#lead" class="nav-link <?= (empty($appointment->subject) ? 'active show' : '')?>" data-toggle="tab">
 										1. Lead Details
@@ -112,11 +112,16 @@
 										3. Show Appointment
 									</a>
 								</li>
+								<li class="nav-item">
+									<a href="#sale" class="nav-link" data-toggle="tab">
+										4. Make a Sale
+									</a>
+								</li>
 							</ul>
 						<div class="tab-content">
 							<div class="tab-pane card <?= (empty($appointment->subject) ? 'active show' : '')?>" id="lead">
 								<div class="row col-md-11  pl-md-4 user-details">
-									<div class="col-md-12 "><h2><?= $leads->lead_name; ?></h2></div>
+									<div class="col-md-12 "><h2><?= $leads->lead_name; ?><button type="button" id="makesale" class="btn btn-primary">Make a Sale</button></h2></div>
 										<div class="col-md-3 user-title">Lead Name : </div>
 										<div class="col-md-7 "><?= $leads->lead_name; ?></div>
 										<div class="col-md-3 user-title">Lead Source :</div>
@@ -267,6 +272,77 @@
 									</table>
 								</div>
 							</div>
+							<div class="tab-pane" id="sale">
+								<div class="row mt-4">
+										<div class="col-md-12">	
+											<?= $this->Form->Create(null, ['id'=>'addsale','url' => [
+												'controller' => '',
+												'action' => ''
+											]]) ?>
+											<div class="col-md-12 col-xl-12">
+												<div class="row">
+													<div class="col-md-4 col-lg-4 col-xl-4">
+								                        <div class="mb-3">
+								                           <label class="form-label">Pay in full</label>
+								                           	<?= $this->Form->select('pay_in_full',[0=>'Select',1=>'Yes', 2=>'No'], ['label' => false, 'class'=> 'form-control ignore', 'placeholder' => 'Enter Name', 'required' => true]) ?>
+								                        </div>
+								                    </div>
+													<div class="col-md-4 col-lg-4 col-xl-4">
+								                        <div class="mb-3">														
+								                           <label class="form-label">Total Cost:</label>
+								                           <?= $this->Form->control('total_cost', ['label' => false, 'class'=> 'form-control ignore', 'placeholder' => 'Total Cost', 'required' => true]) ?>
+								                        </div>
+								                    </div>	
+													<div class="monthly col-md-8 col-lg-8 col-xl-8 ">
+													 	<div class="row">								                     			<div class="col-md-8 col-xl-8">
+																<div class="mb-3">
+																	<label class="form-label">Down Payment </label>
+																	<?= $this->Form->control('down_payment', ['label' => false, 'class'=> 'form-control', 'placeholder' => 'Down Payment']) ?>
+																</div>
+															</div>
+															<div class="col-md-8 col-xl-8">
+																<div class="mb-3">
+																	<label class="form-label">Monthly Payment </label>
+																	<?= $this->Form->control('monthly_payment', ['label' => false, 'class'=> 'form-control', 'placeholder' => 'Monthly Payment']) ?>
+																</div>
+															</div>
+															<div class="col-md-8 col-xl-8">
+																<div class="mb-3">
+																	<label class="form-label"># of Payments </label>
+																	<?= $this->Form->control('no_of_payments', ['label' => false, 'class'=> 'form-control', 'placeholder' => '# of Payments']) ?>
+																</div>
+															</div>
+															<div class="col-md-8 col-xl-8">
+																<div class="mb-3">
+																	<label class="form-label">Monthly Fee </label>
+																	<?= $this->Form->control('monthly_fee', ['label' => false, 'class'=> 'form-control', 'placeholder' => 'Monthly Fee']) ?>
+																</div>
+															</div>
+															<div class="col-md-8 col-xl-8">
+																<div class="mb-3">
+																	<label class="form-label">Payment Start Date </label>
+																	<div class="input-group date" id="p_start_date">
+														                <input class="form-control ignore" name="payment_start_date"/><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-calendar my-1"></i></span></span>
+														            </div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<input type="hidden" name="payment" id="payment_id">
+													<div class="col-sm-8 row">									
+														<div id="card-element"  class="form-control pt-2 mb-3 mr-md-3 rounded-0"></div>
+														<div id="payment-result"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 text-right">
+											<button type="submit" class="btn btn-primary ">Save</button>
+											<button type="button" class="btn btn-link">Cancel</button>
+										</div>										  
+										<?= $this->Form->end(); ?> 
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -276,6 +352,70 @@
 	</div>
 </div>
 </div>
+<script src="https://js.stripe.com/v3/"></script>
+	<script type='text/javascript'>
+
+		$(document).ready(function(){
+					
+			var stripe = Stripe('pk_test_QLUZjUEV4fjS3nOR3E5MI91z');
+			//var stripe = Stripe('<?=  \Cake\Core\Configure::read('seattle_publickey'); ?>');  
+			var elements = stripe.elements();
+			var cardElement = elements.create('card');
+			cardElement.mount('#card-element');
+
+			var form = document.getElementById('addsale');
+
+			var resultContainer = document.getElementById('payment-result');
+			cardElement.on('change', function(event) {
+			  if (event.error) {
+				resultContainer.textContent = event.error.message;
+			  } else {
+				resultContainer.textContent = '';
+			  }
+			});
+
+			form.addEventListener('submit', function(event) {
+			  event.preventDefault();
+			  resultContainer.textContent = "";
+			  stripe.createPaymentMethod({
+				type: 'card',
+				card: cardElement,
+			  }).then(handlePaymentMethodResult);
+			});
+
+			function handlePaymentMethodResult(result) {
+			  if (result.error) {
+				// An error happened when collecting card details, show it in the payment form
+				resultContainer.innerHTML = "<p style='color:red;'>"+ result.error.message +"</p>";
+			  } else {
+				$("#payment_id").val(result.paymentMethod.id);
+				form.submit();
+
+			  }
+			}
+	});
+	</script>
+<script>
+	$(document).ready(function(){
+    $('#makesale').on("click",function(){
+        $('#tabs a[href="#sale"]').tab('show');
+    })
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("select").on("change",function() { 
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue == 2){
+               $(".monthly").show();
+            } else{
+                $(".monthly").hide();
+            }
+        });
+    }).change();
+});
+</script>
 <script type="text/javascript">
 $(document).ready(function() {
     $("#leadstatus").on("change",function() { 		
@@ -384,10 +524,65 @@ $(document).ready(function() {
 			}		
 		}	
 		});
-
+   		$("#addsale").validate( {
+		rules: {					
+			total_cost: {
+				required:true
+			},
+			down_payment: {
+				required:true
+			},
+			monthly_payment: {
+				required:true
+			},
+			no_of_payments: {
+				required:true
+			},
+			monthly_fee: {
+				required:true
+			},
+			payment_start_date: {
+				required:true
+			}
+		},
+		messages:{		
+			total_cost: {
+				required: "Please Enter Total Cost"
+			},
+			down_payment: {
+				required: "Please Enter Down payment Amount"
+			},
+			monthly_payment: {
+				required: "Please Enter Monthly Payment"
+			},
+			no_of_payments: {
+				required: "Please Enter no. of Payments"
+			},
+			monthly_fee: {
+				required: "Please Enter Monthly Fee"
+			},
+			payment_start_date: {
+				required: "Please Enter Payment Start Date"
+			}
+		}		
+		});
 		
     });
 </script>
+<script type="text/javascript">
+	    $(function () {	        
+	        $("#p_start_date").datetimepicker({
+		        useCurrent: false,
+		        format: "L",
+		        showTodayButton: true,
+		        icons: {
+		          next: "fa fa-chevron-right",
+		          previous: "fa fa-chevron-left",
+		          today: 'todayText',
+		        }
+		    });
+	    });
+	</script>
 <style>
 .todaystart:before {
     content: "Today";

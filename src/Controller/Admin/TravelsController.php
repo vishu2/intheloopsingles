@@ -50,6 +50,14 @@ class TravelsController extends AppController {
 	
 	}
 
+	/**
+	 * Registered members for travel method
+	 *
+	 * @param string|null $id travel id.
+	 * @return \Cake\Http\Response|null.
+	 * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+	 */
+
 	public function registered($id = null)
     {
 		$pageTitle = 'Attendee List';

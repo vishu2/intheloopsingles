@@ -86,7 +86,6 @@ class StoriesController extends AppController {
 			} else {
 				$data['story_image'] = $story->story_image;
 			}
-			// end here
 
 			$story = $this->Stories->patchEntity($story, $data);
 			if ($this->Stories->save($story)) {

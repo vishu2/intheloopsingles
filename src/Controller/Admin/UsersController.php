@@ -20,6 +20,12 @@ class UsersController extends AppController {
 		$this->Auth->allow(['login', 'updatePassword']);
 	}
 
+	/**
+	 * Login method
+	 *
+	 * @return \Cake\Http\Response|null Redirects on successful login.
+	 */
+
 	public function login() {
 		$pageTitle = 'Login';
 		$this->viewBuilder()->setLayout('Tabler.login');
@@ -52,6 +58,12 @@ class UsersController extends AppController {
 
 		$this->set(compact('pageTitle'));
 	}
+
+	/**
+	 * Dashboard method
+	 *
+	 * @return \Cake\Http\Response|null
+	 */
 
 	public function dashboard() {
 		$pageTitle = 'Dashboard';
@@ -93,6 +105,12 @@ class UsersController extends AppController {
 		$this->set(compact('pageTitle', 'users'));
 	}
 
+	/**
+	 * Member email method
+	 *
+	 * @return \Cake\Http\Response|null.
+	 */
+
 	public function memberEmail() {
 		$this->autoRender = false;
 		$pageTitle = 'Send Email to Member';
@@ -117,6 +135,15 @@ class UsersController extends AppController {
 		}
 		$this->set(compact('pageTitle'));
 	}
+
+	/**
+     * Member detail method
+     *
+     * @param string|null $id member/user id.
+     * @return \Cake\Http\Response|null
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
+
 
 	public function memberdetail($id = null) {
 		$this->loadModel('MemberNotes');
@@ -249,6 +276,12 @@ class UsersController extends AppController {
 		$this->set(compact('user', 'pageTitle'));
 	}
 
+	/**
+	 * Logout method
+	 *
+	 * @return \Cake\Http\Response|null
+	*/
+
 	public function logout() {
 		$this->Flash->success('You are now logged out.');
 		return $this->redirect($this->Auth->logout());
@@ -288,6 +321,12 @@ class UsersController extends AppController {
 			exit;
 		}
 	}
+
+	/**
+	 * ajax member status change method
+	 *
+	 * @return \Cake\Http\Response|null
+	*/
 
 	public function ajaxMemberStatus() {
 		$this->autoRender = false;
@@ -450,7 +489,6 @@ class UsersController extends AppController {
 	/**
 	 * Member View method
 	 *
-	 * @param $id
 	 * @return \Cake\Http\Response|null Redirects on successful view, renders view otherwise.
 	 * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
 	 */

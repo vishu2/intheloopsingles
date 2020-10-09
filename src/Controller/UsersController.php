@@ -657,6 +657,21 @@ class UsersController extends AppController {
 		$this->set(compact('pageTitle', 'galleries', 'travels'));
 	}
 	
+	/**
+	 * Travel Event Listing method
+	 *
+	 * @return \Cake\Http\Response|null Redirects on successful travel event list, renders view otherwise.
+	 * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+	 */
+	public function travelListing() {
+		$pageTitle = 'Travel Listing';
+		$this->viewBuilder()->setLayout('homelayout');
+		$this->loadModel('Travels');
+
+		$travels = $this->Travels->find()->where(['Travels.published' => 1])->order(['Travels.created' => 'DESC'])->limit(3)->all();
+
+		$this->set(compact('pageTitle', 'travels'));
+	}
 
 	/**
 	 * lead Submission method
